@@ -120,7 +120,7 @@ def load_open_mrg(data_path="./data/", change2min_max=False, xy_min=None, xy_max
     ds = transform_open_mrg(file_location, data_path)
 
     link_list = []
-    if time_slice is not None:
+    if time_slice is not None:### 选择时间段
         ds = ds.sel(time=time_slice)
 
     time_array = ds.time.to_numpy().astype('datetime64[s]')
